@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Ravisha!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap for layout and buttons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Signika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="birthday-audio" loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Black Screen Start -->
+    <div id="stage-black" class="stage active">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+            <button id="btn-start" class="btn btn-lg btn-light">Start Celebration</button>
+        </div>
+    </div>
+
+    <!-- Lights Stage -->
+    <div id="stage-lights" class="stage">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+            <button id="btn-lights" class="btn btn-lg btn-warning">Turn On Lights</button>
+            <div class="lights-row mt-5">
+                <div class="bulb" id="bulb_yellow"></div>
+                <div class="bulb" id="bulb_red"></div>
+                <div class="bulb" id="bulb_blue"></div>
+                <div class="bulb" id="bulb_green"></div>
+                <div class="bulb" id="bulb_pink"></div>
+                <div class="bulb" id="bulb_orange"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Stage -->
+    <div id="stage-banner" class="stage">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+            <div id="code-banner" style="display:none;">
+                <div class="code-banner">
+                  <span>🎉</span>
+                  <span class="banner-text">HAPPY BIRTHDAY RAVISHA</span>
+                  <span>🎉</span>
+                </div>
+            </div>
+            <button id="btn-cake" class="btn btn-lg btn-pink" style="display:none;">Special Cake</button>
+        </div>
+        <div id="balloon-container"></div>
+    </div>
+
+    <!-- Cake Stage -->
+    <div id="stage-cake" class="stage">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 flex-column">
+            <div class="cake-wrap text-center" style="display:none;" id="special-cake">
+                <!-- Cake made with code! -->
+                <div class="cake">
+                    <div class="candles">
+                        <div class="flame"></div>
+                        <div class="flame"></div>
+                        <div class="flame"></div>
+                        <div class="flame"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-bottom"></div>
+                    <div class="cake-plate"></div>
+                </div>
+                <p class="mt-4 lead" style="font-family:Signika,Arial,sans-serif;font-weight:bold;">Click on cake to read message</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Stage -->
+    <div id="stage-message" class="stage">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+            <div class="msg-card text-center p-4">
+                <h1 class="display-4 rainbow-text mb-3">Happy Birthday, <span class="name">Ravisha</span>!</h1>
+                <p class="wish-text lead">
+                    Wishing you a day full of smiles, dreams, and beautiful moments.<br>
+                    May your journey ahead be filled with happiness and success.<br>
+                    <span class="font-italic">You are cherished, celebrated, and truly special. 💖</span>
+                </p>
+                <p class="wish-text mt-4" style="font-size: 1.2rem; color:#e75480;">
+                    <strong>Best wishes from Mridul!</strong>
+                </p>
+                <p class="wish-text" style="font-size: 1.15rem; color:#b22222; font-weight:600;">
+                    AAJ BIRTHDAY K DIN APNE LIFE KE NAYI SURWAT KRNA PURANI BATE SB BHULL KR GBU ❤️
+                </p>
+            </div>
+        </div>
+        <canvas id="confetti"></canvas>
+    </div>
+    
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
